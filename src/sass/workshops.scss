@@ -1,0 +1,277 @@
+@include breakpoint(0, $mobile) {
+    .super-headline {
+        margin-top: 15px;
+    }
+
+    blockquote, h4 {
+        color: $white;
+        font-size: 22px;
+        font-weight: 300;
+    }
+
+    blockquote {
+        margin-bottom: 20px;
+    }
+
+    .section-heading {
+        font-size: 28px;
+    }
+
+    .level {
+        display: flex;
+        background-color: $dark-gray;
+        position: relative;
+        margin-bottom: 100px;
+        > div {
+            width: 100%;
+        }
+    }
+
+    .icon-bg {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+        top: -58px;
+        height: 116px;
+        width: 116px;
+        display: grid;
+        place-items: center;
+        border-radius: 100%;
+        background-color: $bggray;
+    }
+    .icon-bg {
+        img {
+            width: 75px;
+        }
+    }
+
+    .number {
+        position: absolute;
+        left: calc(50% + 38px);
+        top: -67px;
+        background-color: $light-gray;
+        height: 38px;
+        width: 38px;
+        display: grid;
+        place-items: center;
+        border-radius: 100%;
+        color: $primary;
+        font-weight: 600;
+        font-size: 28px;
+        z-index: -1;
+    }
+
+    header {
+        background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/DANCE_-_Grupo_de_Rua%2C_%22Inoah%2C%22_at_Brooklyn_Academy_of_Music_%2849020288773%29.jpg/800px-DANCE_-_Grupo_de_Rua%2C_%22Inoah%2C%22_at_Brooklyn_Academy_of_Music_%2849020288773%29.jpg?20191112041104");
+        background-repeat: no-repeat;
+        height: 558px;
+        background-color: $black;
+        background-position: center bottom -40px;
+
+        h1 {
+            color: white;
+            padding: 15px;
+            font-weight: 300;
+
+            span {
+                text-transform: uppercase;
+                font-size: 16px;
+            }
+        }
+
+        h2 {
+            font-size: 38px;
+            margin-bottom: 20px;
+        }
+    }
+    .header-content {
+        padding: 80px 0 0 80px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        flex: 1 1 0%;
+    }
+    .header-booking {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        padding-bottom: 80px;
+    }
+    nav ul {
+        position: absolute;
+    }
+
+    .articles {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    img.quote {
+        width: 75px;
+    }
+
+    .apply {
+        writing-mode: vertical-lr;
+        color: $black;
+        background-color: $muddy-white;
+        font-size: 18px;
+        padding: 10px;
+        rotate: 180deg;
+    }
+
+    .items-center {
+        justify-content: center;
+    }
+
+    .levelp {
+        line-height: 1.5;
+        font-weight: 300;
+    }
+}
+
+@include breakpoint($desktop) {
+    #workshops {
+        padding: 0 $desktop-padding;
+    }
+    .p-heading {
+        padding: 50px 0px 0px 0px;
+    }
+    .super-headline {
+        font-size: $text-size;
+    }
+    .section-heading {
+        font-size: 3.5em;
+    }
+    .level {
+        grid-template-columns: auto 19%;
+        display: grid !important;
+        padding: 0px 1em;
+        font-weight: 300;
+        min-height: 280px;
+        gap: 2em;
+        margin-bottom: 2em;
+        h3 {
+            font-size: 1.7em;
+            margin-top: 0px;
+        }
+        > div {
+            align-items: center;
+            grid-auto-flow: column;
+            position: relative;
+            background-color: $dark-gray;
+            left: 100px;
+            width: calc(100% - 100px);
+            display: grid;
+            grid-template-columns: repeat(4, 25%);
+        }
+        .icon-bg {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background-color: $bggray;
+            padding: 25px;
+            margin: 0px 1em;
+            grid-column-start: 3;
+            grid-row-start: 1;
+            width: 180px;
+            height: 180px;
+            img {
+                width: 100px;
+                height: 100px;
+            }
+        }
+        .text-info-group {
+            display: inline-block;
+            grid-column-end: span 2;
+            padding-left: 1em;
+            p {
+                font-weight: 300;
+                font-size: $text-size;
+                line-height: 1.5em;
+                width: 85%;
+            }
+        }
+        .blockquote-container {
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: space-between;
+            height: 100%;
+            > div {
+                justify-content: flex-end;
+                img {
+                    width: 50%;
+                    margin: -1em;
+                }
+            }
+            blockquote {
+                color: $white;
+                font-size: 1.7em;
+                text-align: left;
+            }
+        }
+    }
+    .order2 {
+        .icon-bg {
+            grid-column-start: 2;
+        }
+        .blockquote-container {
+            flex-direction: column;
+            grid-column-start: 1;
+            > div {
+                img {
+                    margin-right: 2.5em;
+                }
+            }
+        }
+        .text-info-group {
+            grid-column-start: 3;
+        }
+    }
+    .order2 + .apply {
+        position: absolute;
+        right: 50px;
+        width: 17.7%;
+        height: 593px;
+    }
+    .order3 {
+        .icon-bg {
+            grid-column-start: 1;
+        }
+        .blockquote-container {
+            flex-direction: column;
+            grid-column-start: 4;
+        }
+        .text-info-group {
+            grid-column-start: 2;
+        }
+    }
+    .number {
+        position: absolute;
+        left: -87px;
+        font-size: 12em;
+        font-weight: 600;
+        color: $dark-gray;
+        display: inline-block;
+    }
+    .number-first {
+        top: -42px;
+    }
+    .number-last {
+        bottom: -28px;
+    }
+    .apply {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2em;
+        background-color: $muddy-white;
+        color: $black;
+        padding: 1em;
+    }
+}

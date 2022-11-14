@@ -1,0 +1,8 @@
+node_modules/
+build.sh
+clean-build.sh
+package-lock.json
+package.json
+
+public/wp-config.php
+public/wp-content/uploads

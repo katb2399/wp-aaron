@@ -1,0 +1,57 @@
+@include breakpoint(0, $mobile) {
+    #news {
+        padding: 15px;
+
+        article {
+            background-color: $muddy-white;
+
+            p {
+                line-height: 1.9;
+                color: $dark-gray;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+@include breakpoint($desktop) {
+    article {
+        img {
+            max-width: 100%;
+            max-height: 240px;
+        }
+    }
+    .articles {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: $desktop-padding;
+    }
+    section#news {
+        padding: 3em $desktop-padding 6em $desktop-padding;
+        div.img-crop {
+            overflow-y: hidden;
+            max-height: 340px;
+            img {
+                width: 100%;
+                object-fit: cover;
+                height: 340px;
+            }
+        }
+        div.img-crop ~ div.p-15 {
+            width: 100%;
+            padding: 1.5em;
+            p {
+                font-size: $text-size;
+                margin-bottom: 1em;
+            }
+        }
+        h3 {
+            font-size: 2em;
+            font-weight: 300;
+            margin-bottom: 0px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+    }
+}

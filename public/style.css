@@ -1,0 +1,803 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+ *    v2.0 | 20110126
+ *       License: none (public domain)
+ *       */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* source-sans-pro-200 - latin */
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 200;
+  src: url("../fonts/source-sans-pro-v21-latin-200.eot"); /* IE9 Compat Modes */
+  src: local(""), url("../fonts/source-sans-pro-v21-latin-200.eot?#iefix") format("embedded-opentype"), url("../fonts/source-sans-pro-v21-latin-200.woff2") format("woff2"), url("../fonts/source-sans-pro-v21-latin-200.woff") format("woff"), url("../fonts/source-sans-pro-v21-latin-200.ttf") format("truetype"), url("../fonts/source-sans-pro-v21-latin-200.svg#SourceSansPro") format("svg"); /* Legacy iOS */
+}
+/* source-sans-pro-300 - latin */
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/source-sans-pro-v21-latin-300.eot"); /* IE9 Compat Modes */
+  src: local(""), url("../fonts/source-sans-pro-v21-latin-300.eot?#iefix") format("embedded-opentype"), url("../fonts/source-sans-pro-v21-latin-300.woff2") format("woff2"), url("../fonts/source-sans-pro-v21-latin-300.woff") format("woff"), url("../fonts/source-sans-pro-v21-latin-300.ttf") format("truetype"), url("../fonts/source-sans-pro-v21-latin-300.svg#SourceSansPro") format("svg"); /* Legacy iOS */
+}
+/* source-sans-pro-regular - latin */
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/source-sans-pro-v21-latin-regular.eot"); /* IE9 Compat Modes */
+  src: local(""), url("../fonts/source-sans-pro-v21-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/source-sans-pro-v21-latin-regular.woff2") format("woff2"), url("../fonts/source-sans-pro-v21-latin-regular.woff") format("woff"), url("../fonts/source-sans-pro-v21-latin-regular.ttf") format("truetype"), url("../fonts/source-sans-pro-v21-latin-regular.svg#SourceSansPro") format("svg"); /* Legacy iOS */
+}
+/* source-sans-pro-600 - latin */
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/source-sans-pro-v21-latin-600.eot"); /* IE9 Compat Modes */
+  src: local(""), url("../fonts/source-sans-pro-v21-latin-600.eot?#iefix") format("embedded-opentype"), url("../fonts/source-sans-pro-v21-latin-600.woff2") format("woff2"), url("../fonts/source-sans-pro-v21-latin-600.woff") format("woff"), url("../fonts/source-sans-pro-v21-latin-600.ttf") format("truetype"), url("../fonts/source-sans-pro-v21-latin-600.svg#SourceSansPro") format("svg"); /* Legacy iOS */
+}
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+.show {
+  display: block;
+  visibility: visible;
+}
+
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Source Sans Pro", sans-serif;
+  min-width: none;
+}
+
+h2, h3 {
+  color: hsl(26deg, 63%, 57%);
+  font-weight: 300;
+}
+
+h3 {
+  font-weight: 300;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  color: hsl(0deg, 0%, 100%);
+}
+
+.primary {
+  color: hsl(26deg, 63%, 57%);
+}
+
+.p-15 {
+  padding: 18px;
+}
+
+.pl-15 {
+  padding: 15px;
+}
+
+.p-heading {
+  padding: 50px 15px;
+}
+
+.hidden {
+  display: none;
+}
+
+.mt-20 {
+  margin-top: 90px;
+}
+
+.mb-xl {
+  margin-bottom: 70px;
+}
+
+.mb-sm {
+  margin-bottom: 15px;
+}
+
+.mt-sm {
+  margin-top: 15px;
+}
+
+.mt-m {
+  margin-top: 30px;
+}
+
+.mb-m {
+  margin-bottom: 30px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-white {
+  color: hsl(0deg, 0%, 100%);
+}
+
+.text-black {
+  color: hsl(0deg, 0%, 0%);
+}
+
+header h1 span {
+  font-weight: 600;
+}
+
+.img-crop {
+  width: 100%;
+  overflow: hidden;
+}
+
+img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.flex {
+  display: flex;
+}
+
+.shown {
+  display: flex;
+  translate: 0%;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.button {
+  display: inline-block;
+  border: 1px solid hsl(26deg, 63%, 57%);
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 10px 20px;
+  margin: 15px 0;
+  margin-top: 0;
+  text-decoration: none;
+}
+
+.super-headline {
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: 600;
+  color: hsl(0deg, 0%, 21%);
+}
+
+@media (min-width: 72.5rem) {
+  .button {
+    padding: 14px 27px;
+  }
+}
+@media (min-width: 0rem) and (max-width: 72.4375rem) {
+  header {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/DANCE_-_Grupo_de_Rua%2C_%22Inoah%2C%22_at_Brooklyn_Academy_of_Music_%2849020288773%29.jpg/800px-DANCE_-_Grupo_de_Rua%2C_%22Inoah%2C%22_at_Brooklyn_Academy_of_Music_%2849020288773%29.jpg?20191112041104");
+    background-repeat: no-repeat;
+    height: 558px;
+    background-color: hsl(0deg, 0%, 0%);
+    background-position: center bottom -40px;
+  }
+  header h1 {
+    color: white;
+    padding: 15px;
+    font-weight: 300;
+  }
+  header h1 span {
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+  header h2 {
+    font-size: 38px;
+    margin-bottom: 20px;
+  }
+  .header-content {
+    padding: 80px 0 0 80px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    flex: 1 1 0%;
+  }
+  .header-booking {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding-bottom: 80px;
+  }
+  nav ul {
+    position: absolute;
+  }
+  .menu {
+    position: fixed;
+    display: flex;
+    z-index: 1;
+    flex-direction: column;
+    align-items: end;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 85%;
+    background-color: hsl(0deg, 0%, 21%);
+    padding-top: 70px;
+    padding-right: 15px;
+    transition: translate 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  .menu a {
+    display: block;
+    color: hsl(0deg, 0%, 100%);
+    font-size: 28px;
+    font-weight: 300;
+    margin-bottom: 25px;
+  }
+}
+@media (min-width: 72.5rem) {
+  header {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/DANCE_-_Grupo_de_Rua%2C_%22Inoah%2C%22_at_Brooklyn_Academy_of_Music_%2849020288773%29.jpg/800px-DANCE_-_Grupo_de_Rua%2C_%22Inoah%2C%22_at_Brooklyn_Academy_of_Music_%2849020288773%29.jpg?20191112041104");
+    background-repeat: no-repeat;
+    height: 896px;
+    background-color: hsl(0deg, 0%, 0%);
+    background-position: right 10vh;
+    background-size: contain;
+    font-size: 1.2em;
+    padding: 0 36px;
+  }
+  header h1 {
+    color: white;
+    padding: 15px 0;
+    font-weight: 300;
+  }
+  header span {
+    text-transform: uppercase;
+  }
+  header .header-booking {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-bottom: 80px;
+  }
+  header .button {
+    padding: 20px 30px;
+  }
+  header h2 {
+    color: hsl(26deg, 63%, 57%);
+    font-size: 3em;
+    margin-bottom: 1em;
+  }
+  header > div:first-child {
+    align-items: center;
+    padding: 20px 0px;
+  }
+  .menu {
+    display: flex;
+  }
+  nav ul li {
+    margin-right: 15px;
+  }
+  nav ul li a {
+    color: hsl(26deg, 63%, 57%);
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .header-content {
+    padding-left: 80px;
+    display: flex;
+    height: 80%;
+    align-items: center;
+  }
+  .button {
+    font-size: 1.2em;
+  }
+}
+@media (min-width: 0rem) and (max-width: 72.4375rem) {
+  .super-headline {
+    margin-top: 15px;
+  }
+  blockquote, h4 {
+    color: hsl(0deg, 0%, 100%);
+    font-size: 22px;
+    font-weight: 300;
+  }
+  blockquote {
+    margin-bottom: 20px;
+  }
+  .section-heading {
+    font-size: 28px;
+  }
+  .level {
+    display: flex;
+    background-color: hsl(0deg, 0%, 21%);
+    position: relative;
+    margin-bottom: 100px;
+  }
+  .level > div {
+    width: 100%;
+  }
+  .icon-bg {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: -58px;
+    height: 116px;
+    width: 116px;
+    display: grid;
+    place-items: center;
+    border-radius: 100%;
+    background-color: hsl(0deg, 0%, 35%);
+  }
+  .icon-bg img {
+    width: 75px;
+  }
+  .number {
+    position: absolute;
+    left: calc(50% + 38px);
+    top: -67px;
+    background-color: hsl(0deg, 0%, 84%);
+    height: 38px;
+    width: 38px;
+    display: grid;
+    place-items: center;
+    border-radius: 100%;
+    color: hsl(26deg, 63%, 57%);
+    font-weight: 600;
+    font-size: 28px;
+    z-index: -1;
+  }
+  header {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/DANCE_-_Grupo_de_Rua%2C_%22Inoah%2C%22_at_Brooklyn_Academy_of_Music_%2849020288773%29.jpg/800px-DANCE_-_Grupo_de_Rua%2C_%22Inoah%2C%22_at_Brooklyn_Academy_of_Music_%2849020288773%29.jpg?20191112041104");
+    background-repeat: no-repeat;
+    height: 558px;
+    background-color: hsl(0deg, 0%, 0%);
+    background-position: center bottom -40px;
+  }
+  header h1 {
+    color: white;
+    padding: 15px;
+    font-weight: 300;
+  }
+  header h1 span {
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+  header h2 {
+    font-size: 38px;
+    margin-bottom: 20px;
+  }
+  .header-content {
+    padding: 80px 0 0 80px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    flex: 1 1 0%;
+  }
+  .header-booking {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding-bottom: 80px;
+  }
+  nav ul {
+    position: absolute;
+  }
+  .articles {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  img {
+    max-width: 100%;
+  }
+  img.quote {
+    width: 75px;
+  }
+  .apply {
+    writing-mode: vertical-lr;
+    color: hsl(0deg, 0%, 0%);
+    background-color: hsl(0deg, 0%, 97%);
+    font-size: 18px;
+    padding: 10px;
+    rotate: 180deg;
+  }
+  .items-center {
+    justify-content: center;
+  }
+  .levelp {
+    line-height: 1.5;
+    font-weight: 300;
+  }
+}
+@media (min-width: 72.5rem) {
+  #workshops {
+    padding: 0 36px;
+  }
+  .p-heading {
+    padding: 50px 0px 0px 0px;
+  }
+  .super-headline {
+    font-size: 1.1em;
+  }
+  .section-heading {
+    font-size: 3.5em;
+  }
+  .level {
+    grid-template-columns: auto 19%;
+    display: grid !important;
+    padding: 0px 1em;
+    font-weight: 300;
+    min-height: 280px;
+    gap: 2em;
+    margin-bottom: 2em;
+  }
+  .level h3 {
+    font-size: 1.7em;
+    margin-top: 0px;
+  }
+  .level > div {
+    align-items: center;
+    grid-auto-flow: column;
+    position: relative;
+    background-color: hsl(0deg, 0%, 21%);
+    left: 100px;
+    width: calc(100% - 100px);
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+  }
+  .level .icon-bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: hsl(0deg, 0%, 35%);
+    padding: 25px;
+    margin: 0px 1em;
+    grid-column-start: 3;
+    grid-row-start: 1;
+    width: 180px;
+    height: 180px;
+  }
+  .level .icon-bg img {
+    width: 100px;
+    height: 100px;
+  }
+  .level .text-info-group {
+    display: inline-block;
+    grid-column-end: span 2;
+    padding-left: 1em;
+  }
+  .level .text-info-group p {
+    font-weight: 300;
+    font-size: 1.1em;
+    line-height: 1.5em;
+    width: 85%;
+  }
+  .level .blockquote-container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    height: 100%;
+  }
+  .level .blockquote-container > div {
+    justify-content: flex-end;
+  }
+  .level .blockquote-container > div img {
+    width: 50%;
+    margin: -1em;
+  }
+  .level .blockquote-container blockquote {
+    color: hsl(0deg, 0%, 100%);
+    font-size: 1.7em;
+    text-align: left;
+  }
+  .order2 .icon-bg {
+    grid-column-start: 2;
+  }
+  .order2 .blockquote-container {
+    flex-direction: column;
+    grid-column-start: 1;
+  }
+  .order2 .blockquote-container > div img {
+    margin-right: 2.5em;
+  }
+  .order2 .text-info-group {
+    grid-column-start: 3;
+  }
+  .order2 + .apply {
+    position: absolute;
+    right: 50px;
+    width: 17.7%;
+    height: 593px;
+  }
+  .order3 .icon-bg {
+    grid-column-start: 1;
+  }
+  .order3 .blockquote-container {
+    flex-direction: column;
+    grid-column-start: 4;
+  }
+  .order3 .text-info-group {
+    grid-column-start: 2;
+  }
+  .number {
+    position: absolute;
+    left: -87px;
+    font-size: 12em;
+    font-weight: 600;
+    color: hsl(0deg, 0%, 21%);
+    display: inline-block;
+  }
+  .number-first {
+    top: -42px;
+  }
+  .number-last {
+    bottom: -28px;
+  }
+  .apply {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    background-color: hsl(0deg, 0%, 97%);
+    color: hsl(0deg, 0%, 0%);
+    padding: 1em;
+  }
+}
+@media (min-width: 0rem) and (max-width: 72.4375rem) {
+  #about {
+    background-color: hsl(23deg, 100%, 97%);
+    padding-top: 50px;
+    padding-bottom: 20px;
+  }
+  #about p {
+    line-height: 1.5em;
+    color: hsl(0deg, 0%, 21%);
+  }
+}
+@media (min-width: 72.5rem) {
+  section#about {
+    padding: 75px 0;
+  }
+  section#about > div {
+    padding: 8em 36px;
+  }
+  section#about div.img-crop {
+    width: 100%;
+    height: 100%;
+  }
+  section#about div.img-crop img {
+    width: inherit;
+    object-fit: cover;
+    height: 100%;
+    max-height: unset;
+  }
+  section#about div.img-crop ~ div.p-15 {
+    width: 70%;
+  }
+  section#about div.img-crop ~ div.p-15 p {
+    font-size: 1.2em;
+  }
+  #about > div:first-child {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+    gap: 20px;
+  }
+  section#about > div,
+div.articles > article {
+    background-color: hsl(23deg, 100%, 97%);
+  }
+  div.img-crop ~ div.p-15 p {
+    color: hsl(0deg, 0%, 21%);
+    font-weight: 300;
+    font-size: 1.1em;
+    line-height: 1.7em;
+  }
+  div.img-crop ~ div.p-15 p.super-headline {
+    font-weight: 600;
+  }
+}
+@media (min-width: 0rem) and (max-width: 72.4375rem) {
+  #news {
+    padding: 15px;
+  }
+  #news article {
+    background-color: hsl(0deg, 0%, 97%);
+  }
+  #news article p {
+    line-height: 1.9;
+    color: hsl(0deg, 0%, 21%);
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 72.5rem) {
+  article img {
+    max-width: 100%;
+    max-height: 240px;
+  }
+  .articles {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 36px;
+  }
+  section#news {
+    padding: 3em 36px 6em 36px;
+  }
+  section#news div.img-crop {
+    overflow-y: hidden;
+    max-height: 340px;
+  }
+  section#news div.img-crop img {
+    width: 100%;
+    object-fit: cover;
+    height: 340px;
+  }
+  section#news div.img-crop ~ div.p-15 {
+    width: 100%;
+    padding: 1.5em;
+  }
+  section#news div.img-crop ~ div.p-15 p {
+    font-size: 1.1em;
+    margin-bottom: 1em;
+  }
+  section#news h3 {
+    font-size: 2em;
+    font-weight: 300;
+    margin-bottom: 0px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+@media (min-width: 0rem) and (max-width: 72.4375rem) {
+  #hamburger {
+    position: relative;
+    right: 5px;
+    z-index: 2;
+  }
+  button {
+    background-color: transparent;
+    width: 25px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    border: 0;
+    outline: none;
+    margin: 10px 0;
+    padding: 15px;
+  }
+  button .line {
+    width: 23px;
+    height: 2px;
+    margin-bottom: 8px;
+    background-color: hsl(26deg, 63%, 57%);
+    transition: transform 0.1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transform: rotate(0deg);
+  }
+  button .line1 {
+    transform-origin: center left;
+    transform: rotate(45deg);
+  }
+  button .line2 {
+    width: 23px !important;
+    transform: rotate(-45deg);
+    transform-origin: center right;
+    translate: -8px -10px;
+    margin-bottom: 9px;
+  }
+  button .line:last-child {
+    margin-bottom: 0;
+    width: 16px;
+  }
+  .shown {
+    translate: 0%;
+  }
+  .mobile-hidden {
+    translate: 100%;
+    display: none;
+  }
+}
+@media (min-width: 72.5rem) {
+  #hamburger {
+    display: none;
+  }
+}
+footer {
+  background-color: hsl(0deg, 0%, 21%);
+}
+
+@media (min-width: 72.5rem) {
+  footer {
+    padding: 0 36px;
+  }
+  footer div:first-child {
+    padding-left: 0px;
+    padding-right: 0px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 300;
+  }
+  footer div:first-child h4 {
+    font-size: 1.8em;
+    margin-bottom: 0.25em;
+  }
+  footer div:first-child p {
+    font-size: 1em;
+  }
+  footer .footer-text {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

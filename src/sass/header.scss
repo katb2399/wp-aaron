@@ -1,0 +1,135 @@
+@include breakpoint(0, $mobile) {
+    header {
+        background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/DANCE_-_Grupo_de_Rua%2C_%22Inoah%2C%22_at_Brooklyn_Academy_of_Music_%2849020288773%29.jpg/800px-DANCE_-_Grupo_de_Rua%2C_%22Inoah%2C%22_at_Brooklyn_Academy_of_Music_%2849020288773%29.jpg?20191112041104");
+        background-repeat: no-repeat;
+        height: 558px;
+        background-color: $black;
+        background-position: center bottom -40px;
+
+        h1 {
+            color: white;
+            padding: 15px;
+            font-weight: 300;
+
+            span {
+                text-transform: uppercase;
+                font-size: 16px;
+            }
+        }
+
+        h2 {
+            font-size: 38px;
+            margin-bottom: 20px;
+        }
+    }
+    .header-content {
+        padding: 80px 0 0 80px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        flex: 1 1 0%;
+    }
+    .header-booking {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        padding-bottom: 80px;
+    }
+    nav ul {
+        position: absolute;
+    }
+    .menu {
+        position: fixed;
+        display: flex;
+        z-index: 1;
+        flex-direction: column;
+        align-items: end;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 85%;
+        background-color: $dark-gray;
+        padding-top: 70px;
+        padding-right: 15px;
+        transition: translate 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+        a {
+            display: block;
+            color: $white;
+            font-size: 28px;
+            font-weight: 300;
+            margin-bottom: 25px;
+        }
+    }
+}
+
+@include breakpoint($desktop) {
+    header {
+        background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/DANCE_-_Grupo_de_Rua%2C_%22Inoah%2C%22_at_Brooklyn_Academy_of_Music_%2849020288773%29.jpg/800px-DANCE_-_Grupo_de_Rua%2C_%22Inoah%2C%22_at_Brooklyn_Academy_of_Music_%2849020288773%29.jpg?20191112041104");
+        background-repeat: no-repeat;
+        height: 896px;
+        background-color: $black;
+        background-position: right 10vh;
+        background-size: contain;
+        font-size: 1.2em;
+        padding: 0 $desktop-padding;
+
+        h1 {
+            color: white;
+            padding: 15px 0;
+            font-weight: 300;
+        }
+        span {
+            text-transform: uppercase;
+        }
+        .header-booking {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding-bottom: 80px;
+        }
+        .button {
+            padding: 20px 30px;
+        }
+        h2 {
+        color: $primary;
+        font-size: 3em;
+        margin-bottom: 1em;
+        }
+    }
+
+    header > div:first-child {
+        align-items: center;
+        padding: 20px 0px;
+    }
+    .menu {
+        display: flex;
+    }
+
+    nav {
+        ul {
+            li {
+                margin-right: 15px;
+                a {
+                    color: $primary;
+                    text-decoration: underline;
+                    text-underline-offset: 6px;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    .header-content {
+        padding-left: 80px;
+        display: flex;
+        height: 80%;
+        align-items: center;
+    }
+
+    .button {
+        font-size: 1.2em;
+    }
+}

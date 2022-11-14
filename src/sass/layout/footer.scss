@@ -1,0 +1,32 @@
+footer {
+    background-color: $dark-gray;
+}
+
+@include breakpoint(0, $mobile) {
+
+}
+
+@include breakpoint($desktop) {
+    footer {
+        padding: 0 $desktop-padding;
+        div:first-child {
+            padding-left: 0px;
+            padding-right: 0px;
+            display: flex;
+            justify-content: space-between;
+            font-weight: 300;
+            h4 {
+                font-size: 1.8em;
+                margin-bottom: 0.25em;
+            }
+            p {
+                font-size: 1em;
+            }
+        }
+
+        .footer-text {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

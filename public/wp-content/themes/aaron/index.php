@@ -59,7 +59,7 @@ TODO: – Add title
         <div class="level flex">
           <div class="p-15">
             <div class="icon-bg">
-              <img src="<?php echo get_template_directory_uri();?>./images/stretch.svg" alt='Icon showing dancer stretching her leg up to her nose.'>
+              <img src="<?php echo get_template_directory_uri();?>/images/stretch.svg" alt='Icon showing dancer stretching her leg up to her nose.'>
             </div>
             <div class="number number-first">3</div>
             <div class="text-info-group">
@@ -71,7 +71,7 @@ TODO: – Add title
               <a href="#" class="button text-white">Book Workshop</a>
             </div>
             <div  class="blockquote-container">
-              <div class="flex items-center"><img src="<?php echo get_template_directory_uri();?>./images/quote.svg" alt='quote sign' class="quote"></div>
+              <div class="flex items-center"><img src="<?php echo get_template_directory_uri();?>/images/quote.svg" alt='quote sign' class="quote"></div>
               <blockquote class="text-center p-15">Respect your talent!</blockquote>
             </div>
           </div>
@@ -81,7 +81,7 @@ TODO: – Add title
         <div class="level flex">
           <div class="p-15 order2">
             <div class="icon-bg">
-              <img src="<?php echo get_template_directory_uri();?>./images/up.svg" alt='Icon showing dancer stretching her leg up to her nose.'>
+              <img src="<?php echo get_template_directory_uri();?>/images/up.svg" alt='Icon showing dancer stretching her leg up to her nose.'>
             </div>
             <div class="number">2</div>
             <div class="text-info-group">
@@ -93,7 +93,7 @@ TODO: – Add title
               <a href="#" class="button text-white">Book Workshop</a>
             </div>
             <div  class="blockquote-container">
-              <div class="flex items-center"><img src="<?php echo get_template_directory_uri();?>./images/quote.svg" alt='quote sign' class="quote"></div>
+              <div class="flex items-center"><img src="<?php echo get_template_directory_uri();?>/images/quote.svg" alt='quote sign' class="quote"></div>
               <blockquote class="text-center p-15">Thank yourself for leveling up now!</blockquote>
             </div>
           </div>
@@ -103,7 +103,7 @@ TODO: – Add title
         <div class="level flex">
           <div class="p-15 order3">
             <div class="icon-bg">
-              <img src="<?php echo get_template_directory_uri();?>./images/rise.svg" alt='Icon showing dancer stretching her leg up to her nose.' class="quote">
+              <img src="<?php echo get_template_directory_uri();?>/images/rise.svg" alt='Icon showing dancer stretching her leg up to her nose.' class="quote">
             </div>
             <div class="number number-last">1</div>
             <div class="text-info-group">
@@ -115,7 +115,7 @@ TODO: – Add title
               <a href="#" class="button text-white">Book Workshop</a>
             </div>
             <div class="blockquote-container">
-              <div class="flex items-center"><img src="<?php echo get_template_directory_uri();?>./images/quote.svg" alt='quote sign' class="quote"></div>
+              <div class="flex items-center"><img src="<?php echo get_template_directory_uri();?>/images/quote.svg" alt='quote sign' class="quote"></div>
               <blockquote class="text-center p-15">Fall in love with dancing!</blockquote>
             </div>
           </div>

@@ -52,143 +52,101 @@ TODO: – Add title
 
     <main>
       <section id="workshops">
+
         <div class="p-heading">
           <p class="super-headline mt-m">Find your entrance level & book a workshop with Aaron</p>
           <h2 class="section-heading mb-xl">If you never start, you will never know.</h2>
         </div>
-        <div class="level flex">
-          <div class="p-15">
+        <?php
+            $workshop = new WP_Query(array('category_name' => 'Workshops', 'order' => 'ASC'));
+            if ($workshop -> have_posts()) :
+              while ($workshop -> have_posts()) :
+                $workshop -> the_post();
+        ?>
+        <div class="level flex" id="level-<?php echo get_post_custom_values('workshop-id')[0]?>">
+          <div class="p-15
+            <?php
+              if(get_post_custom_values('workshop-id')[0] == 2) { echo 'order2'; }
+              else if(get_post_custom_values('workshop-id')[0] == 3) { echo 'order3'; }
+            ?>">
             <div class="icon-bg">
-              <img src="<?php echo get_template_directory_uri();?>/images/stretch.svg" alt='Icon showing dancer stretching her leg up to her nose.'>
+              <?php the_post_thumbnail(); ?>
             </div>
-            <div class="number number-first">3</div>
+            <div class="number
+              <?php
+                if(get_post_custom_values("workshop-level")[0] == 3) { echo 'number-first'; }
+                if(get_post_custom_values("workshop-level")[0] == 1) { echo 'number-last'; }
+              ?>">
+              <?php echo get_post_custom_values("workshop-level")[0]; ?>
+            </div>
             <div class="text-info-group">
-              <h3 class="mt-20">As pro as you can get</h3>
-              <p class="levelp mb-m">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-              </p>
-              <a href="#" class="button text-white">Book Workshop</a>
+            <h3 class="mt-20"><?php the_title(); ?></h3>
+            <div class="levelp mb-m">
+              <?php the_content(); ?>
+            </div>
+            <a href="<?php the_permalink(); ?>" class="button text-white">Book Workshop</a>
             </div>
             <div  class="blockquote-container">
               <div class="flex items-center"><img src="<?php echo get_template_directory_uri();?>/images/quote.svg" alt='quote sign' class="quote"></div>
-              <blockquote class="text-center p-15">Respect your talent!</blockquote>
+              <blockquote class="text-center p-15"><?php echo get_post_custom_values("workshop-slogan")[0]; ?></blockquote>
             </div>
           </div>
-          <p class='apply'>Apply for an audition now!</p>
+          <p class='apply'><?php echo get_post_custom_values("workshop-text")[0]; ?></p>
         </div>
+        <?php
+              endwhile;
+            endif;
+        ?>
 
-        <div class="level flex">
-          <div class="p-15 order2">
-            <div class="icon-bg">
-              <img src="<?php echo get_template_directory_uri();?>/images/up.svg" alt='Icon showing dancer stretching her leg up to her nose.'>
-            </div>
-            <div class="number">2</div>
-            <div class="text-info-group">
-              <h3 class="mt-20">As pro as you can get</h3>
-              <p class="levelp mb-m">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-              </p>
-              <a href="#" class="button text-white">Book Workshop</a>
-            </div>
-            <div  class="blockquote-container">
-              <div class="flex items-center"><img src="<?php echo get_template_directory_uri();?>/images/quote.svg" alt='quote sign' class="quote"></div>
-              <blockquote class="text-center p-15">Thank yourself for leveling up now!</blockquote>
-            </div>
-          </div>
-          <p class="apply">Registration now open for everybody!</p>
-        </div>
-
-        <div class="level flex">
-          <div class="p-15 order3">
-            <div class="icon-bg">
-              <img src="<?php echo get_template_directory_uri();?>/images/rise.svg" alt='Icon showing dancer stretching her leg up to her nose.' class="quote">
-            </div>
-            <div class="number number-last">1</div>
-            <div class="text-info-group">
-              <h3 class="mt-20">As pro as you can get</h3>
-              <p class="levelp mb-m">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-                tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-              </p>
-              <a href="#" class="button text-white">Book Workshop</a>
-            </div>
-            <div class="blockquote-container">
-              <div class="flex items-center"><img src="<?php echo get_template_directory_uri();?>/images/quote.svg" alt='quote sign' class="quote"></div>
-              <blockquote class="text-center p-15">Fall in love with dancing!</blockquote>
-            </div>
-          </div>
-          <p class="apply">Registration now open for everybody!</p>
-        </div>
       </section>
       <section id="about">
+      <?php
+            $about_me = new WP_Query(array('category_name' => 'About me', 'order' => 'ASC'));
+            if ($about_me -> have_posts()) :
+              while ($about_me -> have_posts()) :
+                $about_me -> the_post();
+        ?>
         <div>
           <div class="img-crop">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Cheng_Tsung_Lung.jpg/800px-Cheng_Tsung_Lung.jpg?20150616132951" alt=""/>
+            <?php the_post_thumbnail();?>
           </div>
           <div class="p-15">
-            <p class="super-headline">Why I teach</p>
-            <h2 class="section-heading mb-sm">Hi, I'm Aaron!</h2>
-            <p class="mb-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat itaque incidunt, nihil, recusandae autem aut perferendis reiciendis a neque veniam quibusdam animi ex tempora reprehenderit, aspernatur asperiores consequatur consectetur ipsum!</p>
-            <p class="mb-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat itaque incidunt, nihil, recusandae autem aut perferendis reiciendis a neque veniam quibusdam animi ex tempora reprehenderit, aspernatur asperiores consequatur consectetur ipsum! Lorem ipsum dolor sit amet.</p>
+            <p class="super-headline"><?php echo get_post_custom_values('hero-sub-heading')[0] ?></p>
+            <h2 class="section-heading mb-sm"><?php  the_title(); ?></h2>
+            <div class="mb-sm"><?php echo the_content(); ?></div>
             <a class="button">Learn more</a>
           </div>
         </div>
+        <?php
+              endwhile;
+            endif;
+        ?>
       </section>
+
       <section id="news">
         <p class="super-headline">Making waves since 2004</p>
         <h2 class="section-heading mb-sm">In the News</h2>
         <div class="articles">
+          <?php
+            $news_query = new WP_Query(array('category_name' => 'news ', 'order' => 'ASC'));
+            if ($news_query->have_posts()) :
+              while ($news_query->have_posts()) :
+                $news_query->the_post();
+          ?>
           <article>
-            <h3 class="p-15">Sydney Dance Festival 2022</h3>
+            <h3 class="p-15"><?php the_title(); ?></h3>
             <div class="img-crop">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Meredith_Monk_-_On_Behalf_of_Nature_-_Brooklyn_Academy_of_Music_%2815822608589%29.jpg/799px-Meredith_Monk_-_On_Behalf_of_Nature_-_Brooklyn_Academy_of_Music_%2815822608589%29.jpg?20180517142809" alt="Aaron performing at the Sydney dance festival 2022" >
+              `<?php	the_post_thumbnail(); ?>
             </div>
               <div class="p-15">
-              <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-              sed diam nonumy eirmod tempor invidunt ut labore et
-              dolore magna aliquyam erat, sed diam voluptua. At vero
-              eos et accusam et justo duo dolores et ea rebum. Stet
-              clita kasd gubergren, no sea takimata sanctus est.
-              </p>
+              <p><?php the_excerpt(); ?></p>
               <a href="#" class="button text-black">Read more</a>
             </div>
           </article>
-
-          <article>
-            <h3 class="p-15">"Dance Pool" 2023 sold out!</h3>
-            <div class="img-crop">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/DANCE_-_Grupo_de_Rua%2C_%22Inoah%2C%22_at_Brooklyn_Academy_of_Music_%2849021032627%29.jpg/800px-DANCE_-_Grupo_de_Rua%2C_%22Inoah%2C%22_at_Brooklyn_Academy_of_Music_%2849021032627%29.jpg?20191112041132" alt="Group picture of 'Dance Pool'" >
-            </div>
-              <div class="p-15">
-              <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-              sed diam nonumy eirmod tempor invidunt ut labore et
-              dolore magna aliquyam erat, sed diam voluptua. At vero
-              eos et accusam et justo duo dolores et ea rebum. Stet
-              clita kasd gubergren, no sea takimata sanctus est.
-              </p>
-              <a href="#" class="button text-black">Read more</a>
-            </div>
-          </article>
-
-          <article>
-            <h3 class="p-15">New London Workshop Oct. 2025</h3>
-            <div class="img-crop">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Meredith_Monk_-_On_Behalf_of_Nature_-_Brooklyn_Academy_of_Music_%2815989693711%29.jpg/800px-Meredith_Monk_-_On_Behalf_of_Nature_-_Brooklyn_Academy_of_Music_%2815989693711%29.jpg?20180517140541" alt="Aaron at a workshop">
-            </div>
-              <div class="p-15">
-              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-              sed diam nonumy eirmod tempor invidunt ut labore et
-              dolore magna aliquyam erat, sed diam voluptua. At vero
-              eos et accusam et justo duo dolores et ea rebum. Stet
-              clita kasd gubergren, no sea takimata sanctus est.
-              </p>
-              <a href="#" class="button text-black">Read more</a>
-            </div>
-          </article>
+          <?php
+              endwhile;
+            endif;
+          ?>
         </div>
       </section>
     </main>

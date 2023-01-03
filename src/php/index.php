@@ -96,6 +96,7 @@ TODO: – Add title
         <?php
               endwhile;
             endif;
+            wp_reset_postdata();
         ?>
 
       </section>
@@ -120,6 +121,7 @@ TODO: – Add title
         <?php
               endwhile;
             endif;
+            wp_reset_postdata();
         ?>
       </section>
 
@@ -146,6 +148,7 @@ TODO: – Add title
           <?php
               endwhile;
             endif;
+            wp_reset_postdata();
           ?>
         </div>
       </section>
